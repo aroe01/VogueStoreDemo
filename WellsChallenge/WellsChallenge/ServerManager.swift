@@ -8,13 +8,28 @@
 
 import Foundation
 
+//singleton manager to handle client/server communication
 class ServerManager : NSObject{
     static var Instance : ServerManager = ServerManager()
     
+    //currently authed user
+    private var CurrentUser : User?
+    
+    //after successful login, get user info
     func postLogin(){
         self.getUserTransaction()
     }
     
+    func getUserLoyaltyPointsAsString() -> String{
+        guard let user = self.CurrentUser else{
+            return "0"
+        }
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        return numberFormatter.stringFromNumber(user.CurrentLoyaltyPoints)!
+    }
+    
+    //Async Post request to the server for user info
     func getUserTransaction() {
         
         let ServerUrl = NSURL(string: "http://54.191.35.66:8181/pfchang/api/buy?username=Michael&grandTotal=0")
@@ -34,17 +49,26 @@ class ServerManager : NSObject{
         
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            print("Response: \(response)")
+//            print("Response: \(response)")
             do {
-                if let _ = response as? NSHTTPURLResponse {
+                if(data != nil){
+//                        let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+//                        print("Body: \(strData)")
                     
-                    if(data != nil){
-                        let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                        print("Body: \(strData)")
-                        
-                        let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as! NSDictionary
-                        print("YAY")
+                    self.CurrentUser = User()
+                    
+                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as! NSDictionary
+                    
+                    if let name = json["username"] where name is String{
+                        self.CurrentUser?.UserName = name as! String
                     }
+                    if let points = json["rewardPoints"] where points is Int{
+                        self.CurrentUser?.CurrentLoyaltyPoints = points as! Int
+                    }
+                    dispatch_async(dispatch_get_main_queue(), {
+                        NSNotificationCenter.defaultCenter().postNotificationName(LOYALTY_REFRESH_NOTIF, object: self)
+                    })
+                    
                 }
             } catch {}
         })

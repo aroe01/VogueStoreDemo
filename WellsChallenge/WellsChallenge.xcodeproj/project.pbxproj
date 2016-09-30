@@ -15,11 +15,15 @@
 		3AE6C8371D9C57EF002F2895 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE6C8361D9C57EF002F2895 /* LocalAuthentication.framework */; };
 		3AE6C8391D9C6BC6002F2895 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8381D9C6BC6002F2895 /* ServerManager.swift */; };
 		3AE6C83B1D9C7819002F2895 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C83A1D9C7819002F2895 /* ProductsViewController.swift */; };
-		3AE6C83D1D9C7D22002F2895 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C83C1D9C7D22002F2895 /* ProductTableCell.swift */; };
 		3AE6C83F1D9D9847002F2895 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C83E1D9D9847002F2895 /* StoreViewController.swift */; };
 		3AE6C8431D9D9E70002F2895 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8421D9D9E70002F2895 /* UIColor+Ext.swift */; };
 		3AE6C8471D9D9F0D002F2895 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8461D9D9F0D002F2895 /* Common.swift */; };
 		3AE6C84B1D9DA911002F2895 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C84A1D9DA911002F2895 /* BaseViewController.swift */; };
+		3AE6C84D1D9DB2FB002F2895 /* StorePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C84C1D9DB2FB002F2895 /* StorePageViewController.swift */; };
+		3AE6C8501D9DB715002F2895 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C84F1D9DB715002F2895 /* PageContentViewController.swift */; };
+		3AE6C8521D9DC03C002F2895 /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8511D9DC03C002F2895 /* PageData.swift */; };
+		3AE6C8541D9DDAC6002F2895 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8531D9DDAC6002F2895 /* User.swift */; };
+		3AE6C8561D9DE317002F2895 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6C8551D9DE317002F2895 /* CartButtonView.swift */; };
 		6E6B287F68F518A3BD954E2C /* Pods_WellsChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C023949FEB48549E6DE22EFE /* Pods_WellsChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,11 +39,15 @@
 		3AE6C8361D9C57EF002F2895 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		3AE6C8381D9C6BC6002F2895 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		3AE6C83A1D9C7819002F2895 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
-		3AE6C83C1D9C7D22002F2895 /* ProductTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
 		3AE6C83E1D9D9847002F2895 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		3AE6C8421D9D9E70002F2895 /* UIColor+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3AE6C8461D9D9F0D002F2895 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3AE6C84A1D9DA911002F2895 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3AE6C84C1D9DB2FB002F2895 /* StorePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageViewController.swift; sourceTree = "<group>"; };
+		3AE6C84F1D9DB715002F2895 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		3AE6C8511D9DC03C002F2895 /* PageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
+		3AE6C8531D9DDAC6002F2895 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3AE6C8551D9DE317002F2895 /* CartButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
 		C023949FEB48549E6DE22EFE /* Pods_WellsChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WellsChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD601D21F98E99E825AF47CF /* Pods-WellsChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WellsChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-WellsChallenge/Pods-WellsChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +115,8 @@
 				3AE6C8261D9C5675002F2895 /* LoginViewController.swift */,
 				3AE6C83E1D9D9847002F2895 /* StoreViewController.swift */,
 				3AE6C83A1D9C7819002F2895 /* ProductsViewController.swift */,
-				3AE6C83C1D9C7D22002F2895 /* ProductTableCell.swift */,
+				3AE6C84C1D9DB2FB002F2895 /* StorePageViewController.swift */,
+				3AE6C84F1D9DB715002F2895 /* PageContentViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +142,9 @@
 			children = (
 				3AE6C8461D9D9F0D002F2895 /* Common.swift */,
 				3AE6C84A1D9DA911002F2895 /* BaseViewController.swift */,
+				3AE6C8511D9DC03C002F2895 /* PageData.swift */,
+				3AE6C8531D9DDAC6002F2895 /* User.swift */,
+				3AE6C8551D9DE317002F2895 /* CartButtonView.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -267,15 +279,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE6C8541D9DDAC6002F2895 /* User.swift in Sources */,
 				3AE6C8471D9D9F0D002F2895 /* Common.swift in Sources */,
 				3AE6C8431D9D9E70002F2895 /* UIColor+Ext.swift in Sources */,
 				3AE6C8271D9C5675002F2895 /* LoginViewController.swift in Sources */,
 				3AE6C8391D9C6BC6002F2895 /* ServerManager.swift in Sources */,
+				3AE6C8561D9DE317002F2895 /* CartButtonView.swift in Sources */,
+				3AE6C8521D9DC03C002F2895 /* PageData.swift in Sources */,
 				3AE6C83F1D9D9847002F2895 /* StoreViewController.swift in Sources */,
+				3AE6C8501D9DB715002F2895 /* PageContentViewController.swift in Sources */,
 				3AE6C84B1D9DA911002F2895 /* BaseViewController.swift in Sources */,
 				3AE6C83B1D9C7819002F2895 /* ProductsViewController.swift in Sources */,
 				3AE6C8251D9C5675002F2895 /* AppDelegate.swift in Sources */,
-				3AE6C83D1D9C7D22002F2895 /* ProductTableCell.swift in Sources */,
+				3AE6C84D1D9DB2FB002F2895 /* StorePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

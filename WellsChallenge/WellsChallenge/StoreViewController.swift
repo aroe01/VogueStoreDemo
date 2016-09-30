@@ -20,6 +20,8 @@ class StoreViewController : BaseViewController{
     @IBOutlet weak var OffersButtonImageView : UIImageView!
     @IBOutlet weak var LoyaltyButtonImageView : UIImageView!
     
+    @IBOutlet weak var LoyaltyPointsLabel : UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,14 @@ class StoreViewController : BaseViewController{
         self.PersonalShopperButtonImageVIew.image = IonIcons.imageWithIcon(ion_bag, size: 44, color: UIColor.whiteColor())
         self.OffersButtonImageView.image = IonIcons.imageWithIcon(ion_pricetag, size: 44, color: UIColor.whiteColor())
         self.LoyaltyButtonImageView.image = IonIcons.imageWithIcon(ion_trophy, size: 44, color: UIColor.whiteColor())
+        
+        
+        self.onRefreshLoyalty()
+        //loyalty updates from the server
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StoreViewController.onRefreshLoyalty), name: LOYALTY_REFRESH_NOTIF, object: nil)
+    }
+    func onRefreshLoyalty(){
+        self.LoyaltyPointsLabel.text = ServerManager.Instance.getUserLoyaltyPointsAsString() + " pts."
     }
     
     

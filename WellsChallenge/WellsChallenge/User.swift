@@ -1,5 +1,5 @@
 //
-//  Common.swift
+//  User.swift
 //  WellsChallenge
 //
 //  Created by Adrian Roe on 9/29/16.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-let WELLS_BLUE = 0x4569B3
-
-let LOYALTY_REFRESH_NOTIF = "com.adrian.loyaltyRefresh"
+//Basic user info
+class User {
+    var UserName = ""
+    var CurrentLoyaltyPoints = 0
+}
